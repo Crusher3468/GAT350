@@ -5,14 +5,13 @@
 
 namespace neu
 {
-	void ModelComponent::Update()
-	{
-		//
-	}
-
 	void ModelComponent::Draw(Renderer& renderer)
 	{
-		m_model->Draw(renderer, m_owner->m_transform);
+			m_material->Bind();
+			// set model view projection matrix for model 
+			m_material->GetProgram() -> SetUniform("model", (glm::mat4)m_owner->m_transform);
+			glDepthMask(depth_test);
+			m_model->m_vertexBuffer.Draw();
 	}
 
 	bool ModelComponent::Write(const rapidjson::Value& value) const
@@ -27,7 +26,11 @@ namespace neu
 
 		m_model = g_resources.Get<Model>(model_name);
 
+		std::string material_name;
+		READ_DATA(value, material_name);
+		m_material = g_resources.Get<neu::Material>(material_name);
 
+		READ_DATA(value, depth_test);
 		return true;
 	}
 }

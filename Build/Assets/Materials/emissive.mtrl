@@ -1,0 +1,16 @@
+{
+  "program": "Shaders/emissive_phong.prog",
+  "textures": [
+    "textures/lava_diffuse.png",
+    "textures/lava_specular.png",
+    "textures/lava_emissive.png"
+  ],
+  "uv_tiling": [ 1, 1 ],
+  "uv_offset": [ 0, 0 ],
+  "color": [
+    1,
+    1,
+    1
+  ],
+  "shininess": 16
+}

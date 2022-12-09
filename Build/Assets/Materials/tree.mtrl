@@ -1,0 +1,13 @@
+{  
+"program": "shaders/lit/texture.prog",
+  "textures": [
+    "Textures/tree_diffuse.png",
+    "Textures/tree_normal.png"
+  ],
+  "color": [
+    1,
+    1,
+    1
+  ],
+  "shininess": 32
+}

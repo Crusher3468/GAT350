@@ -1,0 +1,13 @@
+{
+  "program": "shaders/lit/texture.prog",
+  "textures": [
+    "Textures/present9_diffuse.png",
+    "Textures/present9_normal.png"
+  ],
+  "color": [
+    1,
+    1,
+    1
+  ],
+  "shininess": 32
+}

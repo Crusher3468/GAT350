@@ -1,6 +1,8 @@
 #pragma once
 
 #include "Serialization/Json.h"
+#include "Renderer/Model.h"
+#include "Renderer/GUI.h"
 
 #include "Core/Memory.h"
 #include "Core/File.h"
@@ -28,6 +30,8 @@
 #include "Components/TilemapComponent.h"
 #include "Components/CharacterComponent.h"
 #include "Components/CameraComponent.h"
+#include "Components/CameraController.h"
+#include "Components/LightComponent.h"
 
 #include "Input/InputSystem.h"
 #include "Audio/AudioSystem.h"
@@ -38,7 +42,12 @@
 #include "Renderer/Text.h"
 #include "Renderer/Font.h"
 #include "Renderer/Texture.h"
-#include "Renderer/Model.h"
+#include "Renderer/Shader.h"
+#include "Renderer/Program.h"
+#include "Renderer/Material.h"
+#include "Renderer/VertexBuffer.h"
+#include "Renderer/CubemapTexture.h"
+#include "Renderer/Framebuffer.h"
 
 #include <memory>
 #include <vector>
@@ -54,6 +63,7 @@ namespace neu
 	extern ResourceManager g_resources;
 	extern PhysicsSystem g_physicsSystem;
 	extern EventManager g_eventManager;
+	extern GUI g_gui;
 	
 	class Engine : public Singleton<Engine>
 	{
